@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.shortcuts import render
 from django.urls import path, include
 
 from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
 ]
 
 if settings.DEBUG:
