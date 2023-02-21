@@ -18,3 +18,12 @@ class Image(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+
+
+class Thumbnail(models.Model):
+    image = models.ForeignKey('Image', on_delete=models.CASCADE, related_name='thumbnails')
+    url = models.FileField(upload_to='resized_images/')
+    height = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f'{self.url.name}'

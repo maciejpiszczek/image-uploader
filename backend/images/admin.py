@@ -4,3 +4,4 @@ from images import models
 
 
 admin.site.register(models.Image)
+admin.site.register(models.Thumbnail)
