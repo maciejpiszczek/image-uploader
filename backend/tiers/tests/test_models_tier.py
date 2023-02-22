@@ -1,9 +1,6 @@
-import pytest
-
 from tiers.models import Tier
 
 
-@pytest.mark.models
 def test_tier_creation(db, create_test_tier, create_test_size):
     assert isinstance(create_test_tier, Tier)
     assert create_test_tier.name == 'test tier'
@@ -13,6 +10,5 @@ def test_tier_creation(db, create_test_tier, create_test_size):
     assert create_test_tier.__str__() == 'test tier'
 
 
-@pytest.mark.models
 def test_tier_fields(db, create_test_tier):
     assert [*create_test_tier.__dict__] == ['_state', 'id', 'name', 'original_link', 'expiring_links']

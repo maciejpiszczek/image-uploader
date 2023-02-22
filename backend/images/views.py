@@ -18,3 +18,4 @@ class ImageViewSet(viewsets.ModelViewSet):
             return ImageSerializer
         else:
             return ImageSerializerWithoutOriginalLink
+
