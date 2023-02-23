@@ -8,7 +8,7 @@ class ExpiringLinkGeneratorSerializer(serializers.Serializer):
     expiration_time = serializers.IntegerField()
 
     def validate(self, data):
-        if not self.context['user'].tier.expired_link_flag:
+        if not self.context['user'].tier.expiring_links:
             raise serializers.ValidationError('Your tier have no access for expiring links.')
 
         return data
