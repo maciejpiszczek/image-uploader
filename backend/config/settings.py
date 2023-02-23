@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'tiers.apps.TiersConfig',
     'images.apps.ImagesConfig',
+    'expiring_links.apps.ExpiringLinksConfig',
 ]
 
 MIDDLEWARE = [
