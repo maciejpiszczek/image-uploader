@@ -33,9 +33,12 @@ services:
       - 6379:6379
     networks:
       - backend_db_network
+    volumes:
+      - redis_data:/data
 
 volumes:
   backend_db_volume:
+  redis_data:
 
 networks:
   backend_db_network:
